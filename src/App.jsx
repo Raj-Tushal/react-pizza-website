@@ -1,21 +1,25 @@
-
+import chinese from "../images/chinese.jpeg"
+import pulao from "../images/pulao.jpg"
+import nihari from "../images/nihari.jpg"
 function App() {
+
+
   var recipes = [
     {
       title:"Fried Rice",
-      img:"../images/chinese.jpeg",
+      img:chinese,
       desc:"Delicious and spicy fried rice with mixed vegetables",
       stock:3,
     },
     {
       title:"Chicken Pulao",
-      img:"../images/pulao.jpg",
+      img:pulao,
       desc:"Chicken Pulao with chicken pieces and fragrant rice.",
       stock:6,
     },
-    {
+     {
       title:"Chicken Nihari",
-      img:"../images/nihari.jpg",
+      img:nihari,
       desc:"Slow-cooked Nihari with rich, gravy and tender chicken",
       stock:8,
     },
