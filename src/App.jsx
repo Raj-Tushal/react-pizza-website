@@ -22,7 +22,7 @@ function App() {
       title:"Chicken Nihari",
       img:nihari,
       desc:"Slow-cooked Nihari with rich, gravy and tender chicken",
-      stock:8,
+      stock:0,
     },
     {
       title:"Daal Chawal",
@@ -40,12 +40,12 @@ function App() {
       title:"Pizza",
       img:pizza,
       desc:"Cheesy and savory pizza with a variety of toppings",
-      stock:9,
+      stock:12,
     }
   ]
 
   return (
-    <div className="flex flex-col items-center h-full w-full bg-slate-100 ">
+    <div className="flex flex-col items-center h-full w-full bg-slate-100 "  style={{ fontFamily: "sans-serif" }}>
       <Header />
 
       {/* card 01 */}
@@ -57,7 +57,7 @@ function App() {
         ))}
     </div>
 <div className="text-center">
-    <button className="text-black font-bold bg-yellow-500 w-32 h-8 rounded-2xl mb-5 hover:bg-yellow-700 ">Order Now</button>
+    <button className="text-black font-bold bg-orange-600 w-40 h-10 rounded-3xl mb-5 hover:bg-orange-700 text-xl p-1 ">See Full Menu</button>
     </div>
      
 </div>
@@ -74,7 +74,7 @@ function Header() {
       </h1>
       <h3 className="text-4xl font-bold border-t-4 border-red-700 ">Our Menu</h3>
       <p className="font-semibold text-2xl text-gray-600  italic">
-        we serve the best pizza in the city
+      Savor the taste, feel the delight, Raj’s Flavor Junction – where every bite’s just right!
       </p>
     </div>
   );
@@ -82,14 +82,16 @@ function Header() {
 function Dish({recipes})   {
   return(
 <div id="pizza-1" className="w-[20%] bg-slate-200 rounded-2xl p-6 space-y-3  cursor-pointer flex flex-col justify-center items-center flex-wrap md:flex m-10 max-sm:w-full shadow-xl shadow-black/50 max-sm:mx-16 transform transition-transform duration-300 hover:scale-105">
-  <img src={recipes.img} alt="" className="size-48 rounded-2xl" />
+    {recipes.stock===0? <img src={recipes.img} alt="" className="size-48 rounded-2xl" style={{ filter: "grayscale(100%)" }} /> : <img src={recipes.img} alt="" className="size-48 rounded-2xl" />}
+
   {/* description */}
   <div className="text-center">
     <h3 className="text-3xl font-bold">{recipes.title}</h3>
     <p className="font-semibold">{recipes.desc}</p>
-    <p className="font-bold text-xl">{recipes.stock}</p>
+   {recipes.stock===0 ?  <p className="font-bold text-xl text-red-600">Out of Stock</p> :<p className="font-bold text-xl text-green-600"> {recipes.stock}</p>}
   </div>
-  <button className="text-black font-bold bg-yellow-500 w-32 h-8 rounded-2xl mb-5 hover:bg-yellow-700 ">Order Now</button>
+  {/* button */}
+  {recipes.stock===0 ? <button className="text-black font-bold bg-gray-500 w-32 h-8 rounded-2xl mb-5 hover:bg-gray-700 ">Order Now</button> :<button className="text-black font-bold bg-yellow-500 w-32 h-8 rounded-2xl mb-5 hover:bg-yellow-700 ">Order Now</button>}
 </div>
 
 
