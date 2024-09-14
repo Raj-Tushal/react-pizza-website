@@ -1,39 +1,44 @@
-
+import chinese from "../images/chinese.jpeg";
+import pulao from "../images/pulao.jpg";
+import nihari from "../images/nihari.jpg";
+import daal from "../images/daal chawal.jpg";
+import biryani from "../images/biryani.jpg";
+import pizza from "../images/3.jpg";
 function App() {
   var recipes = [
     {
       title:"Fried Rice",
-      img:"../images/chinese.jpeg",
+      img:chinese,
       desc:"Delicious and spicy fried rice with mixed vegetables",
       stock:3,
     },
     {
       title:"Chicken Pulao",
-      img:"../images/pulao.jpg",
+      img:pulao,
       desc:"Chicken Pulao with chicken pieces and fragrant rice.",
       stock:6,
     },
     {
       title:"Chicken Nihari",
-      img:"../images/nihari.jpg",
+      img:nihari,
       desc:"Slow-cooked Nihari with rich, gravy and tender chicken",
       stock:8,
     },
     {
       title:"Daal Chawal",
-      img:"../images/daal chawal.jpg",
+      img:  daal,
       desc:"Comforting daal with rice, cooked to perfection",
       stock:20,
     },
     {
       title:"Chicken Biryani",
-      img:"../images/biryani.jpg",
+      img:biryani,
       desc:"Flavorful Chicken Biryani with fragrant basmati rice",
       stock:15,
     },
     {
       title:"Pizza",
-      img:"../images/3.jpg",
+      img:pizza,
       desc:"Cheesy and savory pizza with a variety of toppings",
       stock:9,
     }
