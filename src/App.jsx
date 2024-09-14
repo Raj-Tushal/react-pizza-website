@@ -89,6 +89,7 @@ function Dish({recipes})   {
     <p className="font-semibold">{recipes.desc}</p>
     <p className="font-bold text-xl">{recipes.stock}</p>
   </div>
+  <button className="text-black font-bold bg-yellow-500 w-32 h-8 rounded-2xl mb-5 hover:bg-yellow-700 ">Order Now</button>
 </div>
 
 
